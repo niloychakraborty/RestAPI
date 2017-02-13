@@ -21,7 +21,7 @@ public class CostServiceImpl implements restServiceInterface{
 		return costs;
 	}	
 	public Cost getCost(String id) {
-		Query query = new Query(where("productId").is(Double.parseDouble("90003")));
+		Query query = new Query(where("productId").is(Double.parseDouble(id)));
 	    Cost cost = operations.findOne(query, Cost.class);
 		return cost;
 	}
