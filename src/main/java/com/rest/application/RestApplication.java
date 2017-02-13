@@ -13,7 +13,6 @@ import org.springframework.data.mongodb.core.query.Update;
 
 import com.rest.model.Cost;
 
-
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.rest.controller"})
 
