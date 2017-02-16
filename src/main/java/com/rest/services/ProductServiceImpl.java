@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProductServiceImpl implements restServiceInterface{
+public class ProductServiceImpl implements RestServiceInterface{
 	Logger logger = Logger.getLogger(ProductServiceImpl.class.getName());
 	@Autowired
 	CostServiceImpl costService;
@@ -34,7 +34,7 @@ public class ProductServiceImpl implements restServiceInterface{
 			 Cost cost = costService.getCost(id);
 			 if(cost != null) {
 				 CostOutBound costOutBound = new CostOutBound(cost.getCost(),cost.getCurrencyCode());
-				 productOutBound = new ProductOutBound(Double.parseDouble(id),products.getProduct().getItem().getProductDescription().getTitle(),costOutBound);
+				 productOutBound = new ProductOutBound(Long.parseLong(id),products.getProduct().getItem().getProductDescription().getTitle(),costOutBound);
 			 }
 			 
 		} catch (MalformedURLException e) {

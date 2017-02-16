@@ -2,22 +2,22 @@ package com.rest.model.outbound;
 
 public class ProductOutBound {
 
-	private double id;
+	private Long id;
 	private String name;
 	private CostOutBound current_price;
 	
-	public ProductOutBound(double id, String name, CostOutBound current_price) {
+	public ProductOutBound(Long id, String name, CostOutBound current_price) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.current_price = current_price;
 	}
 
-	public double getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(double id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

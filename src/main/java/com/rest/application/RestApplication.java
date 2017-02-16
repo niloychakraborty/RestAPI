@@ -17,7 +17,7 @@ public class RestApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestApplication.class, args);
-		/*  Used for dataload from costdata.js
+		/*  Used for dataload from costdata.js 
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("application-context.xml");
 		CostRepository repo =  ctx.getBean(CostRepository.class);
 		*/

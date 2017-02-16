@@ -1,5 +1,11 @@
 [{
 	"_class" : "com.rest.model.Cost",
+	"productId" :13860428,
+	"cost" :13.21,
+	"currencyCode" : "USD"
+},
+{
+	"_class" : "com.rest.model.Cost",
 	"productId" :15117729,
 	"cost" :1000,
 	"currencyCode" : "USD"
