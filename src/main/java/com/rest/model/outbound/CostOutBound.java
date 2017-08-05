@@ -8,9 +8,9 @@ public class CostOutBound {
 	public CostOutBound() {
 		super();
 	}
-	public CostOutBound( double cost,String currencyCode) {
+	public CostOutBound( double d,String currencyCode) {
 		super();
-		this.cost = cost;
+		this.cost = d;
 		this.currencyCode = currencyCode;
 	}
 	public double getCost() {

@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document(collection="cost")
 public class Cost {
     @Id
-	private double productId;
+	private Long productId;
     @Field(value="cost")
 	private double cost;
     @Field(value="currencyCode")
@@ -15,16 +15,16 @@ public class Cost {
 	public Cost() {
 		super();
 	}
-	public Cost(double productId, double cost,String currencyCode) {
+	public Cost(Long productId, double cost,String currencyCode) {
 		super();
 		this.productId = productId;
 		this.cost = cost;
 		this.currencyCode = currencyCode;
 	}
-	public double getProductId() {
+	public Long getProductId() {
 		return productId;
 	}
-	public void setProductId(double productId) {
+	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
 	public double getCost() {

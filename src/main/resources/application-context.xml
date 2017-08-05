@@ -2,10 +2,19 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.10.xsd">
-<mongo:template db-factory-ref="mongoDbFactory"/>		
+		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.10.xsd
+		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.11.xsd">
+		
+<mongo:template db-factory-ref="mongoDbFactory"/>
+		
 <mongo:db-factory id="mongoDbFactory" dbname="costDB" mongo-ref="mongoClient"/>
+
 <mongo:mongo-client id="mongoClient" credentials="test:password@costDB">
 </mongo:mongo-client>
+
+<mongo:repositories base-package="com.rest.mongo.repositories"></mongo:repositories>
+
+<repository:jackson2-populator locations="costdata.js"/>
 </beans>
